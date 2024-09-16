@@ -139,5 +139,128 @@ function test() {
 // console.log(f)
 // console.log(g)
 // console.log(h)
-console.log(i)
-test()
+// console.log(i)
+// test()
+
+//hoisting
+
+// all variable declarations
+
+// console.log(a)
+// let a = 'sachin'
+// console.log(a)
+
+// console.log(b)
+// var b = 40
+// console.log(b)
+
+// console.log(c)
+// var c = true
+// console.log(c)
+
+// console.log(d)
+// var d
+// console.log(d)
+
+// console.log(e)
+// var e = null
+// console.log(e)
+
+// console.log(f)
+// var f = { name: 'kohli', age: 30 }
+// console.log(f)
+
+// console.log(g)
+// var g = [1, 2, 3]
+// console.log(g)
+
+// // console.log(h)
+// // h()
+// let h = function test() {
+//   console.log('named fun exp')
+// }
+// console.log(h)
+
+// console.log(i)
+// var i = function () {
+//   console.log('ananymous fun exp')
+// }
+// console.log(i)
+
+// console.log(j)
+// var j = () => {
+//   console.log('arrow fun exp')
+// }
+// console.log(j)
+
+// //function declaration syntax
+// console.log(declare)
+// declare()
+// function declare() {
+//   console.log('function declaration')
+// }
+// console.log(declare)
+
+// var vs let vs const
+
+//scope
+
+//hoisting
+
+//re-declaration
+// let x = 10
+// console.log(x)
+
+// var x = 20
+// console.log(x)
+// const x = 20
+
+//re-assignment
+
+// var x = 10
+// let x = 10
+// const x = 10
+// console.log(x)
+// x = 'sachin'
+// console.log(x)
+// x = true
+// console.log(x)
+
+//Initialization
+
+// var x
+// let x
+// const x
+// console.log(x)
+// x = 10
+// console.log(x)
+
+
+//interview
+
+// var x = 1
+
+// function test() {
+//   console.log(x)
+//   let x = 10
+//   console.log(x)
+// }
+// test()
+// console.log(x)
+// var x = 1
+
+
+//closure
+
+function outer() {
+  var x = 10
+ return function inner() {
+   var y = 100
+   console.log(x)
+   console.log(y)
+  }
+}
+var inner = outer()
+inner()
+
+
