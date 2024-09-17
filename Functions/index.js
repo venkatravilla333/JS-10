@@ -252,15 +252,136 @@ function test() {
 
 //closure
 
-function outer() {
-  var x = 10
- return function inner() {
-   var y = 100
-   console.log(x)
-   console.log(y)
-  }
-}
-var inner = outer()
-inner()
+// function outer() {
+//   var x = 10
+//  return function inner() {
+//    var y = 100
+//    console.log(x)
+//    console.log(y)
+//   }
+// }
+// var inner = outer()
+// inner()
 
 
+
+
+//IIFE
+
+// var x = (()=> {
+//   var a = 10
+  
+// })()
+// console.log(a)
+
+//Without curry
+
+// function test(a,b,c) {
+//   console.log(a+b+c)
+// }
+// test(1, 2, 3)
+
+//with curry
+
+// function one(a) {
+//   return function two(b) {
+//     return function three(c) {
+//       console.log(a+b+c)
+//     }
+//   }
+  
+// }
+// var two = one(1)
+// var three = two(2)
+// three(3)
+
+//without curry
+// function calPrice(price, dis) {
+//   var disAmout = price * dis
+//   console.log(disAmout)
+// }
+// calPrice(1000, .1)
+// calPrice(1000, .2)
+// calPrice(1000, .3)
+// calPrice(1000, .4)
+// calPrice(1000, .5)
+
+// with curry
+
+// function calPrice(price) {
+//   return function calDis(dis) {
+//     var disAmount = price * dis
+//     console.log(disAmount)
+//   }
+// }
+// var calDis = calPrice(1000)
+// calDis(.1)
+// calDis(.2)
+// calDis(.3)
+// calDis(.4)
+// calDis(.5)
+
+
+//first class functions
+
+// var x = (test) => {
+//   test()
+//   return function inner() {
+    
+//   }
+// }
+// x(function test() {
+//   console.log('test')
+// })
+
+//Hof
+
+// function Hof(cb) {
+//   console.log('hof')
+//   function inner() {
+//     console.log('inner')
+//   }
+//   inner()
+//   cb()
+// }
+// Hof(function test() {
+//   console.log('test')
+// })
+
+// callback
+
+// function test(cb) {
+//   console.log('hof')
+//   cb()
+// }
+// test(function cb() {
+//   console.log('callback')
+// })
+
+//pure vs impure
+
+// function pure(a,b,c) {
+//   console.log(a + b + c)
+  
+// }
+// pure(1, 2, 3)
+
+// function impure(a,b,c) {
+//   var d = Math.random() * 10
+//   console.log(a + b + c + d)
+  
+// }
+// impure(1,2,3)
+
+//function recurssion
+
+// function factorial(n) {
+//   if (n <= 0) {
+//     return 1;
+//   } else {
+//     return n * factorial(n - 1);
+//   }
+// }
+
+// let result = factorial(5);
+// console.log(result);
