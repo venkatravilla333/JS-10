@@ -442,29 +442,66 @@ var msg = 'Hi bye bye'
 
 // classical way
 
-class Myclass{
-  constructor() {
-    console.log(this)
-    this.name = 'sachin';
-    this.age = 40;
-    this.outer =  ()=> {
-      console.log(this)
-      var inner = ()=> {
-        console.log(this)
-        var hello =  ()=> {
-          console.log(this)
-        }
-        hello()
-      }
-      inner()
-    }
+// class Myclass{
+//   constructor() {
+//     console.log(this)
+//     this.name = 'sachin';
+//     this.age = 40;
+//     this.outer =  ()=> {
+//       console.log(this)
+//       var inner = ()=> {
+//         console.log(this)
+//         var hello =  ()=> {
+//           console.log(this)
+//         }
+//         hello()
+//       }
+//       inner()
+//     }
       
- }
-}
+//  }
+// }
 // console.log(typeof Myclass)
 
-var family1 = new Myclass()
-family1.outer()
+// var family1 = new Myclass()
+// family1.outer()
+
+// changing of this referenece
+
+
+
+// function test(a,b,c,d,e) {
+//   console.log(this)
+//   console.log(a,b,c,d,e)
+// }
+
+// var obj1 = {
+//   name: 'sachin',
+//   age: 40
+// }
+
+// test(1,2,3,4,5)
+// test.call(obj1, 1,2,3,4,5 )
+// test.apply(obj1, [1,2,3,4,5] )
+// test.bind(obj1, 1,2,3,4,5)()
+
+
+// var obj = {
+//   name: 'sachin',
+//   age: 40,
+//   outer() {
+//     console.log(this)
+//     var inner = ()=> {
+//       console.log(this)
+//     }
+//     inner()
+    // inner.call(obj)
+    // inner.apply(obj)
+    // inner.bind(obj)()
+  // }
+// }
+
+// obj.outer()
 
 
 
