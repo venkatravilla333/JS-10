@@ -187,16 +187,219 @@
 
 // reduce method
 
-var arr = [1, 2, 3, 4, 5]
+// var arr = [1, 2, 3, 4, 5]
 
 
-var result = arr.reduce((cum, cur) => {
-  console.log(cum, cur)
-  return cum + cur
-})
+// var result = arr.reduce((cum, cur) => {
+//   console.log(cum, cur)
+//   return cum + cur
+// })
 
-console.log(result)
+// console.log(result)
 
+//How to convert array into string
+
+// var arr = [1, 2, 3, 4, 5]
+
+// console.log(arr, typeof arr)
+
+// var result = arr.join('*')
+// var result = arr.join()
+
+// console.log(result, typeof result)
+
+// var resultArr = result.split()
+// console.log(resultArr, typeof resultArr)
+
+//How to remove duplicate items from array
+
+// var arr = [1, 2, 3, 4, 3, 5, 3]
+// console.log(arr)
+
+// var values = new Set(arr)
+
+// var uniqueArr = [...values ]
+// console.log(uniqueArr)
+
+// var uniqueArr = []
+
+// function findUnique(arr) {
+//   for (var value of arr) {
+//     console.log(value)
+//     if (uniqueArr.indexOf(value) === -1) {
+//       uniqueArr.push(value)
+//     }
+//   }
+  
+// }
+// findUnique(arr)
+// console.log(uniqueArr)
+
+//How to flatten array
+
+// var arr = [1, 2, 3, [10, 20, 30, [100, 200, 300], ['sachin', 'kohli']]]
+// console.log(arr)
+
+// var flattenArr = arr.flat(2)
+// console.log(flattenArr)
+
+// var flattenArr = []
+// function flattenFun(arr) {
+//   console.log(arr)
+//   for (var value of arr) {
+//     console.log(value)
+//     if (Array.isArray(value)) {
+//      flattenFun(value)
+//     } else {
+//       flattenArr.push(value)
+//    }
+//   }
+// }
+
+// flattenFun(arr)
+// console.log(flattenArr)
+
+// map vs forEach
+
+// var arr = [1, 2, 3, 4, 5]
+
+// console.log(arr)
+
+// var mapResult = arr.map((item) => {
+//   return item*100
+// })
+
+// console.log(mapResult)
+
+// var foreachResult = arr.forEach((v) => {
+//   return v*100
+// })
+// console.log(foreachResult)
+
+// fill
+
+// var arr = ['sachin', 'kohli', 'dhoni', 'gill', 'rahul']
+// console.log(arr)
+
+// var filledArr = arr.fill('pawan', 0, 4)
+// console.log(filledArr)
+
+// at
+
+// var arr = [1, 2, 3, 4, 5]
+
+// console.log(arr)
+
+// var atResult = arr.at(0)
+// console.log(atResult)
+
+// function test() {
+//   console.log(arguments)
+//   console.log(typeof arguments)
+//   console.log(Array.isArray(arguments))
+//   var arr = Array.from(arguments)
+//   console.log(arr)
+//   console.log(Array.isArray(arr))
+// }
+// test(1,2,3,4,5)
+
+// var str = new String('hello sachin')
+// console.log(str)
+// console.log(typeof str)
+// console.log(Array.isArray(str))
+// var result = Array.from(str)
+// console.log(result, typeof result)
+// console.log(Array.isArray(result))
+
+
+// sorting
+
+// primitives
+
+// numbers single value
+
+// var arr = [1, 6, 2, 4, 8]
+
+// console.log(arr)
+
+//Ascending
+
+// var asorder = arr.sort()
+// console.log(asorder)
+
+// Descending
+// var dsorder = arr.reverse()
+// console.log(dsorder)
+
+// numbers double value
+
+// var arr = [2, 300, 5, 8, 50, 1]
+// console.log(arr)
+
+// Ascending
+
+// var asorder = arr.sort((a,b) => {
+//     return a-b
+// })
+// console.log(asorder)
+
+// Descending
+// var dsorder = arr.sort((a,b) => {
+//   return b-a
+// })
+// console.log(dsorder)
+
+// var arr = ['sachin', 'dhoni', 'gill', 'rahul', 'kohli']
+// console.log(names)
+
+// var asorder = names.sort()
+// console.log(asorder)
+// var dsorder = names.reverse()
+// console.log(dsorder)
+
+
+//reference
+
+var arr = [{ course: 'react' }, { course: 'java' }, { course: 'css' }, { course: 'node js' }]
+
+// console.log(arr)
+
+// var asorder = arr.sort((a, b) => {
+//   if (a.course > b.course) {
+//     return 1
+//   }
+//   if (a.course < b.course) {
+//     return -1
+//   }
+// })
+// console.log(asorder)
+
+// var dsorder = arr.sort((a, b) => {
+//   if (a.course > b.course) {
+//     return -1
+//   }
+//   if (a.course < b.course) {
+//     return 1
+//   }
+// })
+// console.log(dsorder)
+
+// nested loop
+
+
+
+// for (var i = 0; i < arr.length; i++){
+//   // console.log('i', i)
+//   for (var j = i + 1; j < arr.length; j++){
+//     // console.log('j', j)
+//     if (arr[i].course < arr[j].course) {
+//       var temp = arr[i]
+//       arr[i] = arr[j]
+//       arr[j] = temp
+//     }
+//   }
+// }
+// console.log(arr)
 
 
 
