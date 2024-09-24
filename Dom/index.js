@@ -133,13 +133,13 @@
 // div.remove()
 // body.removeChild(div)
 
-var button = document.getElementById('btn')
-console.log(button)
+// var button = document.getElementById('btn')
+// console.log(button)
 
-function test() {
-  console.log('button clicked')
-}
-button.addEventListener('click', test, false)
+// function test() {
+//   console.log('button clicked')
+// }
+// button.addEventListener('click', test, false)
 
 
 

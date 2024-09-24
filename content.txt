@@ -1274,5 +1274,118 @@ The Array.isArray() static method determines whether the passed value is an Arra
 
     - true: Capturing phase
 
+8) Events handling in JS.
+   
 
+   1) Event bubling:
+   -----------------
+  
+   - Event bubbling means propagation of an event is done from child element to ancestor elements in the DOM. 
+   - When an event happens on an element, event first runs the handlers on it, then on its parent, then all the way up on other ancestors. Propagation path is bottom to top. 
+                 
+   2) Event capturing: 
+   -------------------
+
+   - Event capturing means propagation of event is done from ancestor elements to child element in the DOM. Propagation path is top to bottom.
+                   
+   3) Event deligation: 
+   --------------------
+ 
+   - Event delegation in JavaScript is a pattern that efficiently handles events. 
+   - Events can be added to a parent element instead of adding to every single element. 
+   - It refers to the process of using event propagation to handle events at 
+     a higher level in the DOM than the element on which the event originated. 
+   - when you click the td, the event bubbles up to the table which handles the event.
+
+    Why Event Delegation?
+    --------------------
+
+   - It is useful because the event can be listened to on multiple elements by using just one event handler. 
+   - It also uses less memory and gives better performance. 
+   - Apart from this,it also requires less time for setting up the event handler on element.
+
+
+
+9) How to improve JS app performance when we fire event in app:
+
+    
+   1) Normal event: It is about firing event every time.
+
+   2) Throttling event: Throtteling is about firing event after every certain time.
+
+   3) Debouncing event: Debouncing is about firing event after every certain time, provided in between there was no event firing.
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+       div{
+           width: 500px;
+           height: 500px;
+           background-color:cornflowerblue;
+           border: 1px solid rgb(0, 26, 255);
+           margin: auto;
+           text-align: center;
+           align-items: center;
+       }
+       h2{
+           color: white;
+           vertical-align: middle;
+           font-size: 40px;
+           font-family:monospace
+       }
+       body{
+           margin: 100px;
+       }
+   </style>
+</head>
+<body>
+    <div onmousemove="showCounts()">
+        <h2 id="nCnt">Normal Count: 0</h2>
+        <h2 id="tCnt">Throttle Count: 0</h2>
+        <h2 id="dCnt">Debounce Count: 0</h2>
+    </div>
+    <script>
+        let nCnt=0;
+        let tCnt=0;
+        let dCnt=0;
+        let nh2 = document.getElementById("nCnt");
+        let th2 = document.getElementById("tCnt");
+        let dh2 = document.getElementById("dCnt");
+        let fireThrottle=true;
+        let dTimer;
+        function showCounts(){
+            normalCount();
+            throttleCount();
+            debounceCount();
+        }
+        function normalCount(){
+            nCnt++;
+            nh2.innerHTML = "Normal Count: " + nCnt;
+        }
+        function throttleCount(){
+            if(fireThrottle===true){
+                tCnt++;
+                th2.innerHTML = "Throttle Count: " + tCnt;
+                fireThrottle=false;
+                setTimeout(function(){
+                    fireThrottle=true;
+                },200)
+   
+            }
+        }
+
+        function debounceCount(){
+           
+            window.clearInterval(dTimer);
+             dTimer =  window.setTimeout(function(){
+                dCnt++;
+                dh2.innerHTML = "Debounce Count: " + dCnt;
+             },200);
+   
+        }
+    </script>
+</body>
+</html>
 
